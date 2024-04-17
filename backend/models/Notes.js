@@ -1,12 +1,17 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
+const { Schema } = mongoose;
 const NotesSchema = new Schema({
+   user: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "user",
+    },
    title: {
     type: String,
     require: true
    },
-   discription: {
+   description: {
     type: String,
-    unique: true
+    require: true
    },
    EventTarget: {
     type: String,

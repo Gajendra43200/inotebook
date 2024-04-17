@@ -16,7 +16,10 @@ const UserSchema = new Schema({
    },
    date: {
     type: Date,
-    default: Date.new
+    default: Date.now
    }
   });
-  module.exports = mongoose.model("user", UserSchema )
+//   create data base 
+  const User =  mongoose.model("user", UserSchema );
+  // User.createIndexes() we dont want to create index corresponding to email beacuse we did email unique true
+  module.exports = User

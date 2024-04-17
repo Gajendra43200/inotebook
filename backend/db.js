@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-const mongoURI = "mongodb://localhost:27017";
+//   create data base i notebook in for user modles data save 
+const mongoURI = "mongodb://localhost:27017/inotebook";
 const connectToMongo = ()=>{
     mongoose.connect(mongoURI, {
         useNewUrlParser: true,

@@ -2,7 +2,8 @@ const connectToMongo = require('./db')
 const express = require('express')
 connectToMongo()
 const app = express()
-const port = 3000
+const port = 5000
+// Set-ExecutionPolicy Bypass -Scope Process - run this command before start nodemon
 // use middle ware  for req body  agr hame req.body ko  use kran hai to ye middle ware lagana padega
 app.use(express.json())
 
